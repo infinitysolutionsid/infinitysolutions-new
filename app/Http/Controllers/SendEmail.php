@@ -10,7 +10,7 @@ class SendEmail extends Controller
 {
     public function sendemail(Request $request)
     {
-        $subject = "Contact dari " . $request->subject;
+        $subject = "Contact dari infinitysolutions.co.id: " . $request->subject;
         $name =  $request->name;
         $email = $request->email;
         $message = $request->message;
@@ -18,11 +18,11 @@ class SendEmail extends Controller
         $mail = new PHPMailer(true);
         try {
             $mail->isSMTP();
-            $mail->Host = 'mail.infinitysolutions.co.id';
+            $mail->Host = 'server.infinitysolutions.co.id';
             $mail->SMTPAuth = true;
             $mail->username = 'support@infinitysolutions.co.id';
             $mail->password = 'InfinitY2501?!!';
-            $mail->SMTPSecure = 'tls';
+            $mail->SMTPSecure = 'none';
             $mail->Port = 587;
 
             $mail->setFrom($email, $name);
@@ -35,20 +35,18 @@ class SendEmail extends Controller
             $mail->AltBody = $message;
             $mail->send();
 
-            $request->session()->flash('sukses');
+            $maillist = new \App\MailDB();
+            $maillist->nama_pengirim = $name;
+            $maillist->email = $email;
+            $maillist->subject = $request->subject;
+            $maillist->messages = $message;
+            $maillist->logIp = $request->getClientIp();
+            $maillist->save();
+
+            return back()->with('sukses');
         } catch (Exception $e) {
             echo 'Messages could not be sent.';
             echo 'Mailer error: ' . $mail->ErrorInfo;
         }
-
-        $maillist = new \App\MailDB();
-        $maillist->nama_pengirim = $name;
-        $maillist->email = $email;
-        $maillist->subject = $request->subject;
-        $maillist->messages = $message;
-        $maillist->logIp = $request->getClientIp();
-        $maillist->save();
-
-        return back()->with('sukses');
     }
 }

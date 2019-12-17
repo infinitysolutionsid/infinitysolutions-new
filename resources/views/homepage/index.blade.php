@@ -556,7 +556,7 @@
                     </button>
                 </div>
                 @endif
-                <form class="widget-contact-form" novalidate action="/send-email" role="form" method="POST">
+                <form action="/send-email" class="" method="post">
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="form-group col-md-6">
