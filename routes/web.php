@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'homepageController@index');
+Route::get('/about-us', 'homepageController@about');
+Route::get('/features', 'homepageController@features');
+Route::get('/services-pricing', 'homepageController@services');
+Route::get('/contact-us', 'homepageController@contact');

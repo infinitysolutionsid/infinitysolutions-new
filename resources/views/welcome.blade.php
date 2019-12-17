@@ -17,7 +17,7 @@
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
 
-    <title>INFINITY SOLUTIONS</title>
+    <title>INFINITY SOLUTIONS @yield('title')</title>
     <meta name="title" content="INFINITY SOLUTIONS ID">
 
     <link href="{!!asset('css/plugins.css')!!}" rel="stylesheet">
@@ -52,7 +52,7 @@
             <div class="header-inner">
                 <div class="container">
 
-                    <div id="logo"> <a href="index.html"><span class="logo-default">INFINITY</span><span
+                    <div id="logo"> <a href="/"><span class="logo-default">INFINITY</span><span
                                 class="logo-dark">INFINITY</span></a> </div>
 
 

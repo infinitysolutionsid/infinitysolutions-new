@@ -16,7 +16,7 @@
                     Indonesia</h1>
                 <div data-animate="fadeInUp" data-animate-delay="900">
                     <button type="button" class="btn btn-rounded btn-reveal btn-reveal-left"><a
-                            href="{!!asset('document/CompanyProfile_InfinitySolutions_ID.pdf')!!}"
+                            href="{!!asset('document/CompanyProfile_InfinitySolutions_EN.pdf')!!}"
                             target="_blank"><span>Learn
                                 More</span></a><i class="fa fa-arrow-right"></i></button>
                 </div>
