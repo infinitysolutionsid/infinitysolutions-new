@@ -66,7 +66,7 @@
 
                     <div class="header-extras">
                         <ul>
-                            <li> <a id="btn-search" href="#"> <i class="fas fa-search"></i></a> </li>
+                            {{-- <li> <a id="btn-search" href="#"> <i class="fas fa-search"></i></a> </li> --}}
                             <li>
                                 <div class="p-dropdown"> <a href="#"><i class="fas fa-globe"></i><span>EN</span></a>
                                     {{-- <ul class="p-dropdown-content">
@@ -87,9 +87,8 @@
                                 <ul>
                                     <li><a href="/">Home</a></li>
                                     <li><a href="/about-us">About Us</a></li>
-                                    <li><a href="/features">Features</a></li>
-                                    <li><a href="/services-pricing">Services & Pricing</a></li>
-                                    <li><a href="/blog">Blog</a></li>
+                                    <li><a href="/gallery">Gallery</a></li>
+                                    <li><a href="https://infinitysolutions.co.id/blog">Blog</a></li>
                                     <li><a href="/contact-us">Contact Us</a></li>
                                     {{-- <li class="dropdown"><a href="#">Layout</a>
                                         <ul class="dropdown-menu">
@@ -264,7 +263,9 @@
                         <div class="col-lg-5">
                             <div class="widget">
                                 <div class="widget-title">Infinity Solutions ID</div>
-                                <p class="mb-5">Built with love in Medan, Indonesia<br>
+                                <img src="https://res.cloudinary.com/https-www-infinitysolutions-co-id/image/upload/v1554180258/footerpng.png"
+                                    class="img-responsive" alt="Infinity Solutions Logo">
+                                <p class="mb-5"><br>
                                     All rights reserved. Copyright © 2019. <br>PT BENUA SOLUSI TEKNOLOGI.</p>
                             </div>
                         </div>
@@ -311,8 +312,12 @@
 
     <script src="{!!asset('js/jquery.js')!!}"></script>
     <script src="{!!asset('js/plugins.js')!!}"></script>
-
+    <script type='text/javascript'
+        src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAZIus-_huNW25Jl7RPmHgoGZjD5udgBMI'>
+    </script>
     <script src="{!!asset('js/functions.js')!!}"></script>
+    <script src="{!!asset('js/gmap/gmap3.min.js')!!}"></script>
+    <script src="{!!asset('js/gmap/map-styles.js')!!}"></script>
 </body>
 
 </html>

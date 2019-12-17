@@ -59,8 +59,8 @@
                         Helpful Humans in
                         Application, Hosting and Internet. We'll give you the <strong>best solutions</strong>.
                     </p>
-                    <a href="https://www.youtube.com/watch?v=awLnur5Yt9o" data-lightbox="iframe"
-                        class="play-button dark"><i class="fa fa-play"></i></a>
+                    {{-- <a href="https://www.youtube.com/watch?v=awLnur5Yt9o" data-lightbox="iframe"
+                        class="play-button dark"><i class="fa fa-play"></i></a> --}}
                 </div>
             </div>
         </div>
@@ -127,7 +127,7 @@
 <section class="no-padding equalize" data-equalize-item=".text-box">
     <div class="row col-no-margin">
 
-        <div class="col-lg-3" style="background-color: #2F2F2F;">
+        <div class="col-lg-3" style="background-color: #3a8860;">
             <div class="text-box">
                 <a href="#">
                     <i class="fas fa-code"></i>
@@ -139,7 +139,7 @@
         </div>
 
 
-        <div class="col-lg-3" style="background-color: #383838;">
+        <div class="col-lg-3" style="background-color: #3a9566;">
             <div class="text-box">
                 <a href="#">
                     <i class="fas fa-chart-pie"></i>
@@ -151,7 +151,7 @@
         </div>
 
 
-        <div class="col-lg-3" style="background-color: #313131;">
+        <div class="col-lg-3" style="background-color: #3a8860;">
             <div class="text-box">
                 <a href="#">
                     <i class="far fa-lightbulb"></i>
@@ -163,7 +163,7 @@
         </div>
 
 
-        <div class="col-lg-3" style="background-color: #383838;">
+        <div class="col-lg-3" style="background-color: #3a9566;">
             <div class="text-box">
                 <a href="#">
                     <i class="fas fa-calculator"></i>
@@ -428,7 +428,7 @@
                     achieve it.
                 </p>
                 <span>Bintang Tobing</span>
-                <span>Co-founder &amp; Developer</span>
+                <span>Co-Founder & Web Apps Developer</span>
             </div>
 
 
@@ -454,32 +454,26 @@
 </section>
 
 
-<section class="background-colored text-center p-t-80  p-b-30">
+<div style="background-image:url({!!asset('storage/bg/calltoac.jpg')!!})"
+    class="call-to-action p-t-100 p-b-100 background-image mb-0">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-5">
-                <div class="widget widget-newsletter">
-                    <form class="widget-subscribe-form" action="include/subscribe-form.php" role="form" method="post"
-                        novalidate="novalidate">
-                        <h3 class="text-light">Subscribe to our Newsletter</h3>
-                        <div class="input-group mb-0">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-paper-plane"></i></span>
-                            </div>
-                            <input type="email" required name="widget-subscribe-form-email"
-                                class="form-control required email" placeholder="Enter your Email">
-                            <div class="input-group-append">
-                                <button type="submit" id="widget-subscribe-submit-button"
-                                    class="btn btn-light">Subscribe</button>
-                            </div>
-                        </div>
-                        <small class="text-light">Stay informed on our latest news!</small>
-                    </form>
-                </div>
+        <div class="row">
+            <div class="col-lg-10">
+                <h3 class="text-light">
+                    Join us to make a wonderfull project.
+                </h3>
+                <p class="text-light">
+                    Start growing with <strong>Infinity Solutions</strong> today. <br>With the Most Helpful Humans in
+                    Application, Hosting
+                    and Internet. We'll give you the best solutions.
+                </p>
+            </div>
+            <div class="col-lg-2">
+                <a class="btn btn-light btn-outline" href="/contact-us">Become a partner!</a>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 
 <section class="p-t-150 p-b-200"
@@ -505,6 +499,8 @@
                         </address>
                         <strong>Phone:</strong> (+62) 21 2245 9102
                         <br>
+                        <strong>Mobile:</strong> (+62) 811 6577 799
+                        <br>
                         <strong>Email:</strong> info@infinitysolutions.co.id
                     </div>
                     <div class="col-lg-6 m-b-30">
@@ -514,6 +510,8 @@
                             Jalan Williem Iskandar, Medan Deli Serdang 20371<br>
                         </address>
                         <strong>Phone:</strong> (+62) 61 8003 2999 (ext. 103)
+                        <br>
+                        <strong>Mobile:</strong> (+62) 811 6577 799
                         <br>
                         <strong>Email:</strong> info@infinitysolutions.co.id
                     </div>
@@ -548,24 +546,42 @@
                 </div>
             </div>
             <div class="col-lg-5 offset-1">
-                <form class="widget-contact-form" novalidate action="include/contact-form.php" role="form"
-                    method="post">
+                @if(session('sukses'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <h4 class="alert-heading"><strong>Well done!</strong></h4>
+                    <p>Message has been successfully sent! Our support team will reply you in 2x24
+                        hours.</p>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @endif
+                <form class="widget-contact-form" novalidate action="/send-email" role="form" method="POST">
+                    {{ csrf_field() }}
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label for="name">Name</label>
-                            <input type="text" aria-required="true" required name="widget-contact-form-name"
+                            <input type="text" aria-required="true" required name="name"
                                 class="form-control required name" placeholder="Enter your Name">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="email">Email</label>
-                            <input type="email" aria-required="true" required name="widget-contact-form-email"
+                            <input type="email" aria-required="true" required name="email"
                                 class="form-control required email" placeholder="Enter your Email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="Subject">Subject
+                                <input type="text" name="subject" placeholder="Enter your subject" id=""
+                                    class="form-control required subject" required>
+                            </label>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea type="text" required name="widget-contact-form-message" rows="8"
-                            class="form-control required" placeholder="Enter your Message"></textarea>
+                        <textarea type="text" required name="message" rows="8" class="form-control required"
+                            placeholder="Enter your Message"></textarea>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-light" type="submit" id="form-submit"><i

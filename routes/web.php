@@ -14,5 +14,6 @@
 Route::get('/', 'homepageController@index');
 Route::get('/about-us', 'homepageController@about');
 Route::get('/features', 'homepageController@features');
-Route::get('/services-pricing', 'homepageController@services');
+Route::get('/gallery', 'homepageController@gallery');
 Route::get('/contact-us', 'homepageController@contact');
+Route::post('/send-email', 'SendEmail@sendemail');

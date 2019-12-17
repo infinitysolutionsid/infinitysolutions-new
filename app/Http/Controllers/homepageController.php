@@ -18,12 +18,12 @@ class homepageController extends Controller
     {
         return view('homepage.features');
     }
-    public function services()
-    {
-        return view('homepage.services');
-    }
     public function contact()
     {
         return view('homepage.contact');
+    }
+    public function gallery()
+    {
+        return view('homepage.gallery');
     }
 }
