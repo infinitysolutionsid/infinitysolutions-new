@@ -18,7 +18,7 @@ class SendEmail extends Controller
         $mail = new PHPMailer(true);
         try {
             $mail->isSMTP();
-            $mail->Host = 'server.infinitysolutions.co.id';
+            $mail->Host = 'mail.infinitysolutions.co.id';
             $mail->SMTPAuth = true;
             $mail->username = 'support@infinitysolutions.co.id';
             $mail->password = 'InfinitY2501?!!';
