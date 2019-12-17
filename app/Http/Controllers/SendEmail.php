@@ -22,7 +22,7 @@ class SendEmail extends Controller
             $mail->SMTPAuth = true;
             $mail->username = 'support@infinitysolutions.co.id';
             $mail->password = 'InfinitY2501?!!';
-            $mail->SMTPSecure = 'none';
+            $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
 
             $mail->setFrom($email, $name);
@@ -43,7 +43,7 @@ class SendEmail extends Controller
             $maillist->logIp = $request->getClientIp();
             $maillist->save();
 
-            return back()->with('sukses');
+            return view('homepage.index')->with('sukses', '');
         } catch (Exception $e) {
             echo 'Messages could not be sent.';
             echo 'Mailer error: ' . $mail->ErrorInfo;

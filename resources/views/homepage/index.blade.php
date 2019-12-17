@@ -549,8 +549,7 @@
                 @if(session('sukses'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <h4 class="alert-heading"><strong>Well done!</strong></h4>
-                    <p>Message has been successfully sent! Our support team will reply you in 2x24
-                        hours.</p>
+                    <p>{{session('sukses')}}</p>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -573,8 +572,10 @@
                     <div class="row">
                         <div class="form-group col-md-12">
                             <label for="Subject">Subject
-                                <input type="text" name="subject" placeholder="Enter your subject" id=""
-                                    class="form-control required subject" required>
+                                <select name="subject" class="custom-select" id="">
+                                    <option value="General Question">General Question</option>
+                                    <option value="Become a partner?">Become a partner?</option>
+                                </select>
                             </label>
                         </div>
                     </div>
