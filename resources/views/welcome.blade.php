@@ -121,7 +121,7 @@
                     <div class="row">
                         <div class="col-lg-5">
                             <div class="widget">
-                                <div class="widget-title">Infinity Solutions ID</div>
+                                {{-- <div class="widget-title">Infinity Solutions ID</div> --}}
                                 <img src="https://res.cloudinary.com/https-www-infinitysolutions-co-id/image/upload/v1554180258/footerpng.png"
                                     class="img-responsive" alt="Infinity Solutions Logo">
                                 <p class="mb-5"><br>
