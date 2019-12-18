@@ -26,4 +26,12 @@ class homepageController extends Controller
     {
         return view('homepage.gallery');
     }
+    public function terms()
+    {
+        return view('homepage.terms');
+    }
+    public function privacy()
+    {
+        return view('homepage.privacy');
+    }
 }

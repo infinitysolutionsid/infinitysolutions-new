@@ -314,6 +314,11 @@
                         <div class="progress-title">FRAMEWORK</div>
                     </div>
                 </div>
+                <div class="p-progress-bar-container title-up small color">
+                    <div class="p-progress-bar" data-percent="95" data-delay="400" data-type="%">
+                        <div class="progress-title">DESIGN</div>
+                    </div>
+                </div>
                 <p class="lead">IN
                     EVERY DEVELOPMENT STEPS, WE USE CREATIVE IDEAS AND PROVEN METHODOLOGY.
                     WE GUARANTEE THAT WE'RE DOING USEFUL FOR YOUR TECHNOLOGY IMPROVEMENT.
@@ -555,7 +560,7 @@
                     </button>
                 </div>
                 @endif
-                <form action="/send-email" class="" method="post">
+                <form action="/send-email" method="post">
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="form-group col-md-6">

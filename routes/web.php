@@ -13,6 +13,8 @@
 
 Route::get('/', 'homepageController@index');
 Route::get('/about-us', 'homepageController@about');
+Route::get('/terms-conditions', 'homepageController@terms');
+Route::get('/privacy-policy', 'homepageController@privacy');
 Route::get('/features', 'homepageController@features');
 Route::get('/gallery', 'homepageController@gallery');
 Route::get('/contact-us', 'homepageController@contact');

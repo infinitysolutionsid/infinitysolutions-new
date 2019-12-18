@@ -52,7 +52,7 @@
 </section>
 <section class="box-fancy section-fullwidth text-light p-b-0">
     <div class="row">
-        <div style="background-color:#917d5d" class="col-lg-4">
+        <div style="background-color:#3a8860" class="col-lg-4">
             <h1 class="text-lg text-uppercase">01.</h1>
             <h3>CONCEPT &amp; CONSULTANCY</h3>
             <span>Before the project work begins, we need to discuss how this project works. Basically this is a list of
@@ -60,7 +60,7 @@
                 needed for system requirements, both from the description of the article and what will be given to
                 visitors. </span>
         </div>
-        <div style="background-color:#a08c6c" class="col-lg-4">
+        <div style="background-color:#3a9566" class="col-lg-4">
             <h1 class="text-lg text-uppercase">02.</h1>
             <h3>IMPLEMENTATION</h3>
             <span>After the data collection is complete, we usually directly involve the development team, the
@@ -69,7 +69,7 @@
                 communication, identify obstacles that must be eliminated. In this way the proccess of carrying out work
                 can be done on time. </span>
         </div>
-        <div style="background-color:#ad9979" class="col-lg-4">
+        <div style="background-color:#3a8860" class="col-lg-4">
             <h1 class="text-lg text-uppercase">03.</h1>
             <h3>TESTING &amp; FINAL REVIEW</h3>
             <span>In this session, work is indicated. We also prepare for any changes that nneed to be made in

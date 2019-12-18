@@ -15,38 +15,14 @@ class SendEmail extends Controller
         $email = $request->email;
         $message = $request->message;
 
-        $mail = new PHPMailer(true);
-        try {
-            $mail->isSMTP();
-            $mail->Host = 'mail.infinitysolutions.co.id';
-            $mail->SMTPAuth = true;
-            $mail->username = 'support@infinitysolutions.co.id';
-            $mail->password = 'InfinitY2501?!!';
-            $mail->SMTPSecure = 'tls';
-            $mail->Port = 587;
+        $maillist = new \App\MailDB();
+        $maillist->nama_pengirim = $name;
+        $maillist->email = $email;
+        $maillist->subject = $subject;
+        $maillist->messages = $message;
+        $maillist->logIp = $request->getClientIp();
+        $maillist->save();
 
-            $mail->setFrom($email, $name);
-            $mail->addAddress('support@infinitysolutions.co.id', 'Support Infinity Solutions');
-            $mail->addReplyTo($email, $name);
-
-            $mail->isHTML(true);
-            $mail->Subject = $subject;
-            $mail->Body = $message;
-            $mail->AltBody = $message;
-            $mail->send();
-
-            $maillist = new \App\MailDB();
-            $maillist->nama_pengirim = $name;
-            $maillist->email = $email;
-            $maillist->subject = $request->subject;
-            $maillist->messages = $message;
-            $maillist->logIp = $request->getClientIp();
-            $maillist->save();
-
-            return view('homepage.index')->with('sukses', '');
-        } catch (Exception $e) {
-            echo 'Messages could not be sent.';
-            echo 'Mailer error: ' . $mail->ErrorInfo;
-        }
+        return back()->with('sukses', 'Your messages has been successfully sent! We will reply your email within 2x24 hours.');
     }
 }
