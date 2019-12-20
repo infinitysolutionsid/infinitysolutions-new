@@ -502,8 +502,6 @@
                             Bukit Gading Raya SB-25<br>
                             Kelapa Gading Barat, DKI Jakarta 14240<br>
                         </address>
-                        <strong>Phone:</strong> (+62) 21 2245 9102
-                        <br>
                         <strong>Mobile:</strong> (+62) 811 6577 799
                         <br>
                         <strong>Email:</strong> info@infinitysolutions.co.id
@@ -514,7 +512,7 @@
                             Komplek MMTC Blok B 84/85<br>
                             Jalan Williem Iskandar, Medan Deli Serdang 20371<br>
                         </address>
-                        <strong>Phone:</strong> (+62) 61 8003 2999 (ext. 103)
+                        <strong>Phone:</strong> (+62) 61 8003 2998 (ext. 103)
                         <br>
                         <strong>Mobile:</strong> (+62) 811 6577 799
                         <br>
